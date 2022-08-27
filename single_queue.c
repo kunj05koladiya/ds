@@ -1,7 +1,7 @@
 #include <stdio.h>      
-#define n 5          // Queue implementation in C
+#define n 6          // Queue implementation in C
 int a[n],front = -1,rear = -1;
-void insert(int value) 
+void rear_insert(int value) 
 {
   if (rear == n - 1)
     printf("\nQueue is Full!!");
@@ -15,7 +15,7 @@ void insert(int value)
   }
 }
 
-void delete() 
+void front_delete() 
 {
   if (front == -1)
     printf("\nQueue is Empty!!");
@@ -43,16 +43,18 @@ void display()
 
 int main()
 {   
-    insert(1);
-    insert(2);
-    insert(3);
-    insert(4);
-    insert(5);
+    rear_insert(1);
+    rear_insert(2);
+    rear_insert(3);
+    rear_insert(4);
+    rear_insert(5);
+    rear_insert(6);
+
     display();
 
-    delete();
-    delete();
-    delete();
+    front_delete();
+    front_delete();
+    front_delete();
 
     display();
 
