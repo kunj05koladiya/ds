@@ -18,12 +18,15 @@ void addFirst(struct node **head, int val)
 
 void printList(struct node *head)
 {
+    int cnt=0;
     struct node *temp = head;
     while(temp != NULL)
     {
          printf("%d\t", temp->data);
+         cnt++;
          temp = temp->next;
     }
+    printf("\ncount:%d",cnt);
 }
 int main()
 {
@@ -32,6 +35,8 @@ int main()
      addFirst(&head,10);
      addFirst(&head,20);
      addFirst(&head,30);
+     addFirst(&head,40);
+
      printList(head);
 
      return 0;

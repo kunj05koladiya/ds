@@ -1,9 +1,9 @@
 #include <stdio.h>      
-#define n 6          // Queue implementation in C
-int a[n],front = -1,rear = -1;
+#define size 6          // Queue implementation in C
+int a[size],front = -1,rear = -1;
 void rear_insert(int value) 
 {
-  if (rear == n - 1)
+  if (rear == size - 1)
     printf("\nQueue is Full!!");
   else 
   {

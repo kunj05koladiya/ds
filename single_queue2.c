@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define n 5
-int a[n],i,r=-1,f=-1;
+#define size 5
+int a[size],i,r=-1,f=-1;
 void rear_insert(int val)
 {
-    if(r+1==n)
+    if(r+1==size)
         printf("queue is full!!");
     else if(f==-1 && r==-1)
     {
@@ -13,6 +13,7 @@ void rear_insert(int val)
     }
     else
         a[++r]=val;
+    printf("\ninserted elements is:%d",val);
 }
 void front_delete()
 {
@@ -22,6 +23,7 @@ void front_delete()
         f=r=-1;
     else
         ++f;
+    printf("\ndeleteded elements is:%d",a[f-1]);   
 }
 void print()
 {
@@ -31,6 +33,7 @@ void print()
     }
     else
     {
+        printf("\n\nqueue elements are:");
         for(i=f;i<=r;i++)
             printf("%d\t",a[i]);
     }

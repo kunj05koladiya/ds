@@ -1,19 +1,19 @@
 #include<stdio.h>
-#define max 5
-int a[max],f=-1,r=-1,i;
+#define size 5
+int a[size],f=-1,r=-1,i;
 void rear_insert(int val)
 {
-    if(r+1==max)
+    if(r+1==size)
         printf("\nqueue is full!!");
-    else if(f==-1 && r==-1)
-        a[++r]=val;
+    // else if(f==-1 && r==-1)
+    //     a[++r]=val;
     else
         a[++r]=val;
     printf("\ninserted-->>%d",val);
 }
 void front_insert(int val)
 {
-    if(r-1==max)
+    if(r-1==size)
         printf("\nqueue is full!!");
     else
         a[f--]=val;

@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define max 5
-int a[max],f=-1,r=-1,i;
+#define size 5
+int a[size],f=-1,r=-1,i;
 void front_insert(int f_val)
 {
-    if(r-1==max)
+    if(r-1==size)
         printf("queue is full\n");
     else
     {
